@@ -1,0 +1,2 @@
+# Játékprogram - (Kő, papír, olló)
+

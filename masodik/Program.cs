@@ -8,6 +8,26 @@ namespace masodik
 {
     class Program
     {
+        static int embernyer(int gep, int ember)
+        {
+            if (ember == gep) //Döntetlen
+            {
+                return 0;
+            }
+
+            else if (ember == 0 && gep == 1 || ember == 1 && gep == 2 || ember == 2 && gep == 0) //Gép nyer
+            {
+                Console.WriteLine("Gép nyert");
+                return 1;
+
+            }
+            else //Játékos nyer
+            {
+                Console.WriteLine("Játékos nyert");
+                return 2;
+            }
+        }
+
         static void Main(string[] args)
         {
             Random veletlen = new Random();
@@ -20,24 +40,21 @@ namespace masodik
             int jatekosValasz;
             Console.WriteLine("Kő (0) Papír(1) Olló(2)");
             jatekosValasz = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Játéks választása: {0}",lehetoseg[jatekosValasz]);
+            Console.WriteLine("Játéks választása: {0}", lehetoseg[jatekosValasz]);
 
-            if (jatekosValasz == gepValaszt) //Döntetlen
+            switch (embernyer(gepValaszt, jatekosValasz))
             {
-                Console.WriteLine("Döntetlen");
+                case 0:
+                    Console.WriteLine("Döntetlen");
+                    break;
+                case 1:
+                    Console.WriteLine("Gép nyert");
+                    break;
+                case 2:
+                    Console.WriteLine("Játékos nyert");
+                    break;
+                    
             }
-
-            else if (jatekosValasz == 0 && gepValaszt == 1 || jatekosValasz == 1 && gepValaszt ==2 || jatekosValasz ==2 && gepValaszt ==0) //Gép nyer
-            {
-                Console.WriteLine("Gép nyert");
-
-            }
-            else //Játékos nyer
-            {
-                Console.WriteLine("Játékos nyert");
-            }
-            
-
 
             Console.ReadKey();
         }

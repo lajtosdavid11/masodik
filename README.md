@@ -8,4 +8,13 @@
 	-A papír legyőzi a követ
 	-Az olló legyőzi a papírt
 - []Kiírjuk az eredményt
+- Nyerés megállapítását kiszervezzük metódusba
+- - Embernyer();
+  - visszaadott érték -> true, false
+  Kiírjuk a végeredményt.
+
+Visszaadott érték = 0, 1, 2
+	0: Döntetlen 
+	1: Gép nyer
+	2: Ember nyer
 

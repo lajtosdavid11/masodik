@@ -18,3 +18,5 @@ Visszaadott érték = 0, 1, 2
 	1: Gép nyer
 	2: Ember nyer
 
+[]Kiírás metódusba
+

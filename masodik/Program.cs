@@ -28,6 +28,23 @@ namespace masodik
             }
         }
 
+        static void eredmenykiiras(int gep, int ember)
+        {
+            switch (embernyer(gep, ember))
+            {
+                case 0:
+                    Console.WriteLine("Döntetlen");
+                    break;
+                case 1:
+                    Console.WriteLine("Gép nyert");
+                    break;
+                case 2:
+                    Console.WriteLine("Játékos nyert");
+                    break;
+
+            }
+        }
+
         static void Main(string[] args)
         {
             Random veletlen = new Random();
@@ -42,19 +59,8 @@ namespace masodik
             jatekosValasz = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Játéks választása: {0}", lehetoseg[jatekosValasz]);
 
-            switch (embernyer(gepValaszt, jatekosValasz))
-            {
-                case 0:
-                    Console.WriteLine("Döntetlen");
-                    break;
-                case 1:
-                    Console.WriteLine("Gép nyert");
-                    break;
-                case 2:
-                    Console.WriteLine("Játékos nyert");
-                    break;
-                    
-            }
+
+            eredmenykiiras(gepValaszt, jatekosValasz);
 
             Console.ReadKey();
         }

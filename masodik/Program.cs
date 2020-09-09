@@ -8,6 +8,7 @@ namespace masodik
 {
     class Program
     {
+        static string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };
         static int embernyer(int gep, int ember)
         {
             if (ember == gep) //Döntetlen
@@ -30,6 +31,7 @@ namespace masodik
 
         static void eredmenykiiras(int gep, int ember)
         {
+            Console.WriteLine("Gép: {0} --- Játékos: {1}",lehetoseg[gep], lehetoseg[ember]);
             switch (embernyer(gep, ember))
             {
                 case 0:
@@ -48,7 +50,7 @@ namespace masodik
         static void Main(string[] args)
         {
             Random veletlen = new Random();
-            string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };
+            
 
             int gepValaszt = veletlen.Next(0, 3);
 
